@@ -1,0 +1,76 @@
+[
+    {
+      "text": "之前的过去篇：NER的过去、现在和未来综述-过去篇",
+      "id": 5,
+      "label": [
+        {
+          "start": 7,
+          "end": 13,
+          "text": "NER的过去",
+          "labels": [
+            "ORG"
+          ]
+        }
+      ],
+      "annotator": 1,
+      "annotation_id": 2,
+      "created_at": "2023-07-03T07:17:27.681026Z",
+      "updated_at": "2023-07-03T07:17:27.681026Z",
+      "lead_time": 5.937
+    },
+    {
+      "text": "过去和现在是相对于某个时间节点的，暂且以bert作为这个时间节点，本文就主要寻找NER在BERT之后的一些方法。本文将从以下方面展开：",
+      "id": 7,
+      "label": [
+        {
+          "start": 20,
+          "end": 30,
+          "text": "bert作为这个时间",
+          "labels": [
+            "Data"
+          ]
+        }
+      ],
+      "annotator": 1,
+      "annotation_id": 3,
+      "created_at": "2023-07-03T07:22:14.125094Z",
+      "updated_at": "2023-07-03T07:22:14.125094Z",
+      "lead_time": 4.356
+    },
+    {
+      "text": "SpanNER: Named EntityRe-/Recognition as Span Prediction",
+      "id": 16,
+      "annotator": 1,
+      "annotation_id": 4,
+      "created_at": "2023-07-03T07:22:18.968998Z",
+      "updated_at": "2023-07-03T07:22:18.968998Z",
+      "lead_time": 4.713
+    },
+    {
+      "text": "这个方法很有意思，当我们要识别一句话中的实体的时候，其实可以通过问题和答案的方式。解码阶段还是可以使用crf或者span。例如：",
+      "id": 35,
+      "label": [
+        {
+          "start": 5,
+          "end": 12,
+          "text": "有意思，当我们",
+          "labels": [
+            "Data"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 32,
+          "text": "可以通过",
+          "labels": [
+            "MISC"
+          ]
+        }
+      ],
+      "annotator": 1,
+      "annotation_id": 5,
+      "created_at": "2023-07-03T07:24:09.643491Z",
+      "updated_at": "2023-07-03T07:24:09.643491Z",
+      "lead_time": 11.086
+    }
+  ]

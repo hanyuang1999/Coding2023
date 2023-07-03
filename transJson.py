@@ -3,21 +3,22 @@ import json
 def transform(jsonA):
     # 解析jsonA文件的内容
     text = jsonA['text']
-    labels_A = jsonA['label']
 
     # 初始化jsonB的内容
     text_B = list(text)
     labels_B = ['O'] * len(text)
 
-    for label in labels_A:
-        start = label['start']
-        end = label['end']
-        entity_type = label['labels'][0]
+    if 'label' in jsonA:
+        labels_A = jsonA['label']
+        for label in labels_A:
+            start = label['start']
+            end = label['end']
+            entity_type = label['labels'][0]
 
-        # 根据起始坐标和结束坐标标记实体
-        labels_B[start] = "B-" + entity_type
-        for i in range(start + 1, end):
-            labels_B[i] = "I-" + entity_type
+            # 根据起始坐标和结束坐标标记实体
+            labels_B[start] = "B-" + entity_type
+            for i in range(start + 1, end):
+                labels_B[i] = "I-" + entity_type
 
     # 构造jsonB
     jsonB = {
